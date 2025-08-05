@@ -1,0 +1,126 @@
+/* Time-based gradient backgrounds */
+.morning-gradient {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+.afternoon-gradient {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.evening-gradient {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+}
+
+.night-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Focus styles for accessibility */
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Custom selection colors */
+::selection {
+  background-color: #3b82f6;
+  color: white;
+}
+
+/* Glass effect utilities */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 3D card effects */
+.card-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.card-3d:hover {
+  transform: rotateY(5deg) rotateX(5deg) translateZ(20px);
+}
+
+/* Floating animation for cards */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Glow effects */
+.glow-primary {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+.glow-secondary {
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+}
+
+/* Loading states */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Mobile-first responsive breakpoints */
+@media (max-width: 768px) {
+  .mobile-hidden { display: none; }
+  .mobile-full { width: 100%; }
+  .mobile-stack { flex-direction: column; }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .tablet-hidden { display: none; }
+  .tablet-grid { display: grid; grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1025px) {
+  .desktop-hidden { display: none; }
+  .desktop-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+}
