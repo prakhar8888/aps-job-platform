@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { CandidateContext } from '../../context/CandidateContext.jsx';
-import { Search, MapPin, Briefcase, Clock, Filter, Star } from 'lucide-react';
+import { Search, MapPin, Briefcase, Clock, Filter, Star, X } from 'lucide-react';
 import { useCandidate } from '../../context/CandidateContext.jsx';
-import JobCard from '../components/Candidate/JobCard.jsx';
-import FilterPanel from '../components/Candidate/FilterPanel.jsx';
+import JobCard from '../../components/Candidate/JobCard.jsx';
+import FilterPanel from '../../components/Candidate/FilterPanel.jsx';
 import SearchBar from '../../components/Common/SearchBar.jsx';
 import LoadingSpinner from '../../components/Common/LoadingSpinner.jsx';
 
